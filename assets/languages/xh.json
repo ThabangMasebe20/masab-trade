@@ -1,0 +1,35 @@
+{
+    "header": {
+        "site_name": "Masab Trade",
+        "tagline": "Sinika Amandla Uqoqosho Lweedolophu",
+        "home": "Ikhaya", "buy": "Thenga", "sell": "Thengisa",
+        "about": "Malunga", "contact": "Qhagamshelana",
+        "login": "Ngena", "register": "Bhalisela"
+    },
+    "hero": {
+        "title": "Thenga Kwaye Uthengise Ngokukhuselekileyo",
+        "subtitle": "Qhagamshelana nabathengisi bendawo. Rhweba ngokuthembana.",
+        "start_shopping": "Qalisa Ukuthenga",
+        "sell_items": "Thengisa Izinto Zakho"
+    },
+    "features": {
+        "title": "Kutheni Ukhetha i-Masab Trade?",
+        "secure_payments": "Iintlawulo Ezikhuselekileyo",
+        "secure_payments_desc": "I-cash-on-delivery kunye nemali yeselula",
+        "trusted_sellers": "Abathengisi Abathembekileyo",
+        "trusted_sellers_desc": "Linganisa kwaye uphononge abathengisi",
+        "local_delivery": "Ukuhanjiswa Kwendawo",
+        "local_delivery_desc": "Amanqaku okuqokelela nabasebenzi bendawo",
+        "your_language": "Ulwimi Lwakho",
+        "your_language_desc": "Ngeelwimi ezintlanu zaseMzantsi Afrika"
+    },
+    "forms": {
+        "product_name": "Igama Lemveliso",
+        "category": "Udidi",
+        "price": "Ixabiso (ZAR)",
+        "condition": "Imeko",
+        "description": "Inkcazo",
+        "location": "Indawo",
+        "list_product": "Dwelisa Imveliso Yam"
+    }
+}

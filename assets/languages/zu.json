@@ -1,0 +1,35 @@
+{
+    "header": {
+        "site_name": "Masab Trade",
+        "tagline": "Sinikeza Amandla Emnotho Yamasipala",
+        "home": "Ikhaya", "buy": "Thenga", "sell": "Thengisa",
+        "about": "Mayelana", "contact": "Xhumana",
+        "login": "Ngena", "register": "Bhalisa"
+    },
+    "hero": {
+        "title": "Thenga Futhi Uthengise Ngokuphepha",
+        "subtitle": "Xhumana nabathengisi bendawo. Thenga ngokwethembana.",
+        "start_shopping": "Qala Ukuthenga",
+        "sell_items": "Thengisa Izinto Zakho"
+    },
+    "features": {
+        "title": "Kungani Ukhetha Masab Trade?",
+        "secure_payments": "Inkokhelo Ephephile",
+        "secure_payments_desc": "I-cash-on-delivery nemali yeselula",
+        "trusted_sellers": "Abathengisi Abathembekile",
+        "trusted_sellers_desc": "Linganisa ubuyekeze abathengisi",
+        "local_delivery": "Ukulethwa Kwendawo",
+        "local_delivery_desc": "Amaphoyinti okuqoqa namasevisi endawo",
+        "your_language": "Ulimi Lwakho",
+        "your_language_desc": "Ngezilimi ezinhlanu zaseNingizimu Afrika"
+    },
+    "forms": {
+        "product_name": "Igama Lomkhiqizo",
+        "category": "Isigaba",
+        "price": "Intengo (ZAR)",
+        "condition": "Isimo",
+        "description": "Incazelo",
+        "location": "Indawo",
+        "list_product": "Faka Umkhiqizo Wami"
+    }
+}

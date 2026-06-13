@@ -1,0 +1,39 @@
+{
+    "header": {
+        "site_name": "Masab Trade",
+        "tagline": "Go Matlafatša Maeto a Motse",
+        "home": "Gae",
+        "buy": "Reka",
+        "sell": "Rekiša",
+        "about": "Ka Rena",
+        "contact": "Ikgokaganya",
+        "login": "Tsena",
+        "register": "Ngwadiša"
+    },
+    "hero": {
+        "title": "Reka le Go Rekiša ka Polokego Setšhabeng Sa Gago",
+        "subtitle": "Ikgokaganya le bareki le bašomi ba selegae. Rekiša ka tumelo.",
+        "start_shopping": "Thoma Go Reka",
+        "sell_items": "Rekiša Dilo Tša Gago"
+    },
+    "features": {
+        "title": "Ke Eng O Kgetha Masab Trade?",
+        "secure_payments": "Ditefelo Tše Bolokehilego",
+        "secure_payments_desc": "Tefo ka gae le dikhwišo tša fone",
+        "trusted_sellers": "Bašomi Bao Ba Kgontšhwago",
+        "trusted_sellers_desc": "Lekola le go recenšia bašomi go aga tumelo ya setšhaba",
+        "local_delivery": "Phetiša ya Selegae",
+        "local_delivery_desc": "Mafelo a go kgoboketša le ditirelo tša courier tša selegae",
+        "your_language": "Polelo Ya Gago",
+        "your_language_desc": "E hwetšagala ka diteme tše 5 tša Afrika Borwa"
+    },
+    "forms": {
+        "product_name": "Leina la Setšweletšwa",
+        "category": "Sedirišwa",
+        "price": "Theko (ZAR)",
+        "condition": "Maemo",
+        "description": "Tlhalošo",
+        "location": "Lefelo",
+        "list_product": "Rekhota Setšweletšwa Sa Me"
+    }
+}

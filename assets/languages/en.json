@@ -1,0 +1,35 @@
+{
+    "header": {
+        "site_name": "Masab Trade",
+        "tagline": "Empowering Township Economies",
+        "home": "Home", "buy": "Buy", "sell": "Sell",
+        "about": "About", "contact": "Contact",
+        "login": "Login", "register": "Register"
+    },
+    "hero": {
+        "title": "Buy and Sell Safely in Your Community",
+        "subtitle": "Connect with local sellers and buyers. Trade with trust.",
+        "start_shopping": "Start Shopping",
+        "sell_items": "Sell Your Items"
+    },
+    "features": {
+        "title": "Why Choose Masab Trade?",
+        "secure_payments": "Secure Payments",
+        "secure_payments_desc": "Cash-on-delivery and mobile money options",
+        "trusted_sellers": "Trusted Sellers",
+        "trusted_sellers_desc": "Rate and review sellers to build community trust",
+        "local_delivery": "Local Delivery",
+        "local_delivery_desc": "Community collection points and local couriers",
+        "your_language": "Your Language",
+        "your_language_desc": "Available in 5 South African languages"
+    },
+    "forms": {
+        "product_name": "Product Name",
+        "category": "Category",
+        "price": "Price (ZAR)",
+        "condition": "Condition",
+        "description": "Description",
+        "location": "Location",
+        "list_product": "List My Product"
+    }
+}
