@@ -270,7 +270,7 @@ $conn->close();
                             <i class="fas fa-store"></i>
                             <?php echo htmlspecialchars($p['seller_name']); ?>
                         </div>
-                        <!-- ✅ Average rating from real reviews -->
+                        
                         <div class="product-rating">
                             <?php for ($s = 1; $s <= 5; $s++): ?>
                                 <i class="<?php echo $s <= round($avg_rating) ? 'fas' : 'far'; ?> fa-star"></i>
@@ -348,7 +348,7 @@ $conn->close();
             </div>
         </div>
 
-        <!-- ✅ Reviews section inside modal -->
+        
         <div id="modalReviews" style="padding:20px 30px; border-top:1px solid #f0f2f5;">
             <h3 id="modalReviewTitle"
                 style="font-size:1rem; color:#2c3e50; margin-bottom:14px;">
@@ -373,7 +373,7 @@ viewProduct = function(id, name, price, desc, condition, location, imgSrc, qty, 
     var notice = document.getElementById('sampleNotice');
     if (notice) notice.style.display = (id === 0) ? 'block' : 'none';
 
-    // ✅ Render reviews
+    // Render reviews
     var revList  = document.getElementById('modalReviewsList');
     var revTitle = document.getElementById('modalReviewTitle');
     if (!revList) return;
