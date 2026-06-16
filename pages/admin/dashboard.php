@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'admin') {
 
 $msg = '';
 
-// ✅ CREATE user
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_user'])) {
     $nu = trim($_POST['new_username'] ?? '');
     $ne = trim($_POST['new_email']    ?? '');
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_user'])) {
     }
 }
 
-// ✅ UPDATE user role
+// UPDATE user role
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_role'])) {
     $uid_upd  = intval($_POST['user_id_update'] ?? 0);
     $new_role = $_POST['updated_role'] ?? '';
@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_role'])) {
     }
 }
 
-// ✅ DELETE user
+// DELETE user
 if (isset($_GET['delete_user'])) {
     $del_id = intval($_GET['delete_user']);
     if ($del_id !== intval($_SESSION['user_id'])) {
@@ -224,7 +224,7 @@ $conn->close();
     <main class="dashboard-main">
         <div class="dashboard-topbar">
             <div><h1>Admin Dashboard</h1><p>Full platform oversight and user management</p></div>
-            <!-- ✅ CREATE user button -->
+            <!-- CREATE user button -->
             <button class="topbar-btn" onclick="document.getElementById('createModal').classList.add('open')">
                 <i class="fas fa-user-plus"></i> Add New User
             </button>
@@ -232,7 +232,7 @@ $conn->close();
 
         <div class="dashboard-content">
 
-            <!-- ✅ Alert messages -->
+            <!--  Alert messages -->
             <?php if ($msg === 'created'): ?>
                 <div class="alert alert-success"><i class="fas fa-check-circle"></i> New user created successfully.</div>
             <?php elseif ($msg === 'create_error'): ?>
@@ -268,7 +268,7 @@ $conn->close();
                 </div>
             </div>
 
-            <!-- ✅ USERS TABLE — full CRUD -->
+            <!--  USERS TABLE — full CRUD -->
             <div class="dashboard-section">
                 <div class="section-header">
                     <h2><i class="fas fa-users"></i> User Management (<?php echo count($all_users); ?>)</h2>
@@ -286,7 +286,7 @@ $conn->close();
                                 <th>Current Role</th>
                                 <th>Status</th>
                                 <th>Registered</th>
-                                <!-- ✅ UPDATE + DELETE columns -->
+                                
                                 <th>Update Role</th>
                                 <th>Delete</th>
                             </tr>
@@ -313,7 +313,7 @@ $conn->close();
                                     </td>
                                     <td><?php echo date('d M Y', strtotime($u['date_registered'])); ?></td>
 
-                                    <!-- ✅ UPDATE: change role inline -->
+                                    <!-- change role inline -->
                                     <td>
                                         <?php if ($u['user_id'] != $_SESSION['user_id']): ?>
                                             <form method="POST" style="display:flex; gap:5px; align-items:center;">
@@ -335,7 +335,7 @@ $conn->close();
                                         <?php endif; ?>
                                     </td>
 
-                                    <!-- ✅ DELETE -->
+                                    
                                     <td>
                                         <?php if ($u['user_id'] != $_SESSION['user_id']): ?>
                                             <a href="/pages/admin/dashboard.php?delete_user=<?php echo $u['user_id']; ?>"
@@ -409,7 +409,7 @@ $conn->close();
     </main>
 </div>
 
-<!-- ✅ CREATE USER MODAL -->
+
 <div class="modal-admin" id="createModal">
     <div class="modal-admin-box">
         <h3><i class="fas fa-user-plus" style="color:#667eea;"></i> Create New User</h3>
@@ -455,7 +455,8 @@ $conn->close();
 <div id="sessionWarning"></div>
 <script src="../../js/main.js"></script>
 <script>
-// Close modal if clicking outside
+
+    
 document.getElementById('createModal').addEventListener('click', function(e) {
     if (e.target === this) this.classList.remove('open');
 });
