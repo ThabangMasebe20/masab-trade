@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// ✅ 9 parameters — reviews is array of objects
+
 function viewProduct(id, name, price, desc, condition, location, imgSrc, qty, reviews) {
     currentProductId    = id;
     currentProductName  = name;
@@ -55,7 +55,7 @@ function viewProduct(id, name, price, desc, condition, location, imgSrc, qty, re
         }
     }
 
-    // ✅ Reviews
+    
     var revList  = document.getElementById('modalReviewsList');
     var revTitle = document.getElementById('modalReviewTitle');
 
