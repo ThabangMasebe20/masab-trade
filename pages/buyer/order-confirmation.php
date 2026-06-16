@@ -37,7 +37,7 @@ if (!$order) {
 $review_success = false;
 $review_error   = '';
 
-// ✅ Check if this specific order already has a review
+// Check if this specific order already has a review
 $chk_rev = $conn->prepare("SELECT review_id FROM reviews WHERE order_id = ? LIMIT 1");
 $chk_rev->bind_param("i", $order_id);
 $chk_rev->execute();
@@ -231,7 +231,7 @@ $order_num = str_pad($order_id, 6, '0', STR_PAD_LEFT);
 </head>
 <body>
 
-<!-- Success popup (only shown on first load after purchase) -->
+<!-- Success popup -->
 <?php if (!isset($_POST['submit_review'])): ?>
 <div class="success-popup" id="successPopup">
     <i class="fas fa-check-circle"></i>
@@ -372,7 +372,7 @@ $order_num = str_pad($order_id, 6, '0', STR_PAD_LEFT);
 
     </div>
 
-    <!-- ✅ REVIEW SECTION — anchored so "Leave Review" button scrolls here -->
+    
     <div class="review-card" id="review">
         <h2><i class="fas fa-star"></i> Rate Your Experience</h2>
 
