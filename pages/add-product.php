@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$error) {
         }
 
         if (!$error) {
-            // ✅ quantity is now properly saved and is_available stays 1
+            
             $ins = $conn->prepare("
                 INSERT INTO products
                     (seller_id, product_name, description, category, price,
@@ -178,7 +178,7 @@ $conn->close();
                 </select>
             </div>
 
-            <!-- ✅ Price and Quantity side by side -->
+            
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
                 <div class="form-group">
                     <label><i class="fas fa-tag"></i> Price (ZAR) *</label>
