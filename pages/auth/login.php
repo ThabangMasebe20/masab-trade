@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email    = trim($_POST['email']    ?? '');
     $password = trim($_POST['password'] ?? '');
 
-    // Also get any redirect parameters passed via hidden fields
+    
     $redirect = trim($_POST['redirect'] ?? '');
     $pid      = intval($_POST['pid']    ?? 0);
 
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['email']         = $user['email'];
             $_SESSION['last_activity'] = time();
 
-            // ✅ Redirect to checkout if came from Buy Now
+            // Redirect to checkout if came from Buy Now
             if ($redirect === 'checkout' && $pid > 0) {
                 header("Location: /pages/buyer/checkout.php?product_id=$pid");
                 exit();
@@ -100,8 +100,7 @@ $conn->close();
             </div>
         <?php endif; ?>
 
-        <form method="POST" action="">
-            <!-- ✅ Pass redirect info through hidden fields so POST gets it -->
+        <form method="POST" action="">            
             <input type="hidden" name="redirect" value="<?php echo htmlspecialchars($get_redirect); ?>">
             <input type="hidden" name="pid"      value="<?php echo $get_pid; ?>">
 
