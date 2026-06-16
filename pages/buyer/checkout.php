@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $tr->execute();
             $tr->close();
 
-            // ✅ FIXED quantity logic — clean and correct
+            
             $new_qty   = intval($product['quantity']) - $qty_ordered;
             $available = ($new_qty > 0) ? 1 : 0;
 
