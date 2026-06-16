@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $new_id = $conn->insert_id;
                 $ins->close();
 
-                // ✅ Create seller profile with business name + description
+                
                 if ($user_role === 'seller') {
                     $sp = $conn->prepare("INSERT INTO seller_profiles (user_id, business_name, business_description, location, rating, total_sales) VALUES (?, ?, ?, '', 0.00, 0)");
                     $sp->bind_param("iss", $new_id, $biz_name, $biz_desc);
@@ -194,16 +194,16 @@ $conn->close();
                     <option value="">-- Select Account Type --</option>
                     <option value="buyer"
                         <?php echo ($role_hint === 'buyer' || $came_from === 'browse') ? 'selected' : ''; ?>>
-                        🛒 Buy Products
+                         Buy Products
                     </option>
                     <option value="seller"
                         <?php echo ($role_hint === 'seller' || $came_from === 'seller') ? 'selected' : ''; ?>>
-                        🏪 Sell Products
+                         Sell Products
                     </option>
                 </select>
             </div>
 
-            <!-- ✅ Seller-only fields -->
+            <!-- Seller-only fields -->
             <div class="seller-fields <?php echo (($role_hint === 'seller' || $came_from === 'seller') ? 'visible' : ''); ?>" id="sellerFields">
                 <p class="seller-fields-title">
                     <i class="fas fa-store" style="color:#0F6E56"></i>
