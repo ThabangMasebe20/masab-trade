@@ -150,7 +150,7 @@ $conn->close();
                                    class="btn-view-order">
                                     <i class="fas fa-eye"></i> View Details
                                 </a>
-                                <!-- ✅ Leave Review button — shows only if not yet reviewed -->
+                                <!-- Leave Review button -->
                                 <?php if (!$hasRev): ?>
                                     <a href="/pages/buyer/order-confirmation.php?order_id=<?php echo $o['order_id']; ?>#review"
                                        class="btn-view-order"
