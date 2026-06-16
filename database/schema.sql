@@ -1,17 +1,7 @@
--- ============================================================
---  Masab Trade — C2C Platform
---  Database Schema
---  File: database/schema.sql
--- ============================================================
-
--- Drop and recreate clean
-DROP DATABASE IF EXISTS c2c_platform;
 CREATE DATABASE c2c_platform CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE c2c_platform;
 
--- ============================================================
--- USERS
--- ============================================================
+
+
 CREATE TABLE users (
     user_id            INT AUTO_INCREMENT PRIMARY KEY,
     username           VARCHAR(50)  UNIQUE NOT NULL,
@@ -24,9 +14,7 @@ CREATE TABLE users (
     date_registered    DATETIME     DEFAULT CURRENT_TIMESTAMP
 );
 
--- ============================================================
--- SELLER PROFILES
--- ============================================================
+
 CREATE TABLE seller_profiles (
     seller_id            INT AUTO_INCREMENT PRIMARY KEY,
     user_id              INT NOT NULL,
@@ -38,11 +26,7 @@ CREATE TABLE seller_profiles (
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
--- ============================================================
--- PRODUCTS
--- quantity  : tracks remaining stock; decremented on each order
--- is_available: set to 0 only when quantity reaches 0
--- ============================================================
+
 CREATE TABLE products (
     product_id       INT AUTO_INCREMENT PRIMARY KEY,
     seller_id        INT           NOT NULL,
@@ -80,15 +64,7 @@ CREATE TABLE orders (
     FOREIGN KEY (seller_id)  REFERENCES seller_profiles(seller_id)
 );
 
--- ============================================================
--- REVIEWS
--- Updated:
---   + product_id   : links review directly to the product
---   + review_title : short headline for the review
---   Duplicate check is enforced by UNIQUE (order_id) —
---   one review per order, but same product bought again
---   (new order_id) can always be reviewed independently.
--- ============================================================
+
 CREATE TABLE reviews (
     review_id    INT  AUTO_INCREMENT PRIMARY KEY,
     order_id     INT  NOT NULL,
@@ -106,9 +82,7 @@ CREATE TABLE reviews (
     FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
 
--- ============================================================
--- MESSAGES
--- ============================================================
+
 CREATE TABLE messages (
     message_id   INT AUTO_INCREMENT PRIMARY KEY,
     sender_id    INT  NOT NULL,
@@ -121,9 +95,7 @@ CREATE TABLE messages (
     FOREIGN KEY (receiver_id) REFERENCES users(user_id)
 );
 
--- ============================================================
--- TRANSACTIONS
--- ============================================================
+
 CREATE TABLE transactions (
     transaction_id     INT AUTO_INCREMENT PRIMARY KEY,
     order_id           INT           NOT NULL,
