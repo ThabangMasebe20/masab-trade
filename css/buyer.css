@@ -131,7 +131,7 @@
     pointer-events: none;
 }
 
-/* ✅ Color coded by stock level */
+
 .stock-high {
     background: rgba(39, 174, 96, 0.88);
     color: white;
